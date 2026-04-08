@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern UI</title>
+<title>Profile</title>
 
 <style>
     * {
@@ -26,55 +26,63 @@
         padding: 30px;
         border-radius: 20px;
         box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        text-align: center;
         width: 90%;
         max-width: 400px;
+        text-align: center;
         transition: 0.3s;
     }
 
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     }
 
-    h1 {
-        margin-bottom: 10px;
+    .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        object-fit: cover;
+    }
+
+    h2 {
+        margin-bottom: 5px;
         color: #333;
     }
 
-    p {
+    .role {
         color: #777;
+        margin-bottom: 15px;
+    }
+
+    .info {
+        text-align: left;
         margin-bottom: 20px;
+    }
+
+    .info p {
+        margin: 5px 0;
+        color: #555;
     }
 
     .btn {
         background: linear-gradient(135deg, #667eea, #764ba2);
         color: #fff;
         border: none;
-        padding: 12px 25px;
+        padding: 12px;
+        width: 100%;
         border-radius: 10px;
         cursor: pointer;
-        font-size: 16px;
-        transition: all 0.3s ease;
+        transition: 0.3s;
     }
 
     .btn:hover {
         transform: scale(1.05);
-        opacity: 0.9;
     }
 
-    /* 📱 Responsive */
+    /* Responsive */
     @media (max-width: 480px) {
         .card {
             padding: 20px;
-        }
-
-        h1 {
-            font-size: 20px;
-        }
-
-        .btn {
-            width: 100%;
         }
     }
 </style>
@@ -83,9 +91,19 @@
 <body>
 
 <div class="card">
-    <h1>Welcome 👋</h1>
-    <p>หน้าเว็บดีไซน์สวยของ K.dod</p>
-    <button class="btn">เริ่มต้นใช้งาน</button>
+    <img src="https://i.pravatar.cc/150" class="avatar">
+
+    <h2>ณเรศณ์ จิตรัตน์</h2>
+    <div class="role">นักพัฒนาเว็บไซต์ (Web Developer)</div>
+
+    <div class="info">
+        <p><strong>อายุ:</strong> 48 ปี</p>
+        <p><strong>อีเมล:</strong> narest@aru.ac.th</p>
+        <p><strong>โทร:</strong> 0635162259</p>
+        <p><strong>ที่อยู่:</strong> พระนครศรีอยุธยา ประเทศไทย</p>
+    </div>
+
+    <button class="btn">ติดต่อ</button>
 </div>
 
 </body>
