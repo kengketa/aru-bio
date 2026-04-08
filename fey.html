@@ -6,14 +6,16 @@
     <title>ประวัติส่วนตัว - ดร.วิโรจน์ ยอดสวัสดิ์</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
         :root {
-            --primary-color: #593C2A; /* สีศิลาแลง / อิฐเก่า */
-            --secondary-color: #A67C00; /* สีทองเก่า / ทองเหลือง */
-            --bg-light: #E3DBD1; /* สีหินทราย / สีปูนเก่า */
-            --text-dark: #2B2622; /* สีเทาดำเข้ม */
-            --white: #F5F2EC; /* สีขาวนวลเนื้อทราย */
+            --primary-color: #4A90E2; /* สีฟ้าสว่างสดใส */
+            --primary-dark: #357ABD;
+            --secondary-color: #FF7FA6; /* สีชมพูพาสเทล */
+            --bg-light: #F4F7F9; /* สีพื้นหลังโทนสว่างสบายตา */
+            --text-dark: #2C3E50; /* สีตัวอักษรหลัก */
+            --text-muted: #7F8C8D; /* สีตัวอักษรรอง */
+            --white: #FFFFFF;
         }
 
         body {
@@ -23,47 +25,45 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            background-image: radial-gradient(circle at top right, #e3f2fd 0%, #f4f7f9 50%, #fff0f5 100%);
         }
 
         /* ส่วนหัวของเว็บไซต์ (Header) */
         .hero-section {
-            background: linear-gradient(rgba(43, 38, 34, 0.75), rgba(20, 18, 16, 0.85)), 
-                        url('https://images.unsplash.com/photo-1585807663249-14ec04a2916b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            color: #FFFFFF;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.85) 0%, rgba(142, 68, 173, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
             text-align: center;
-            padding: 5.5rem 1rem 6.5rem 1rem;
-            border-bottom: 6px solid var(--secondary-color);
+            padding: 6rem 1rem 7rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         .hero-section h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            color: #E2C275;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
             font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         .hero-section p {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-top: 0;
             font-weight: 300;
-            letter-spacing: 1px;
-            color: #EAEAEA;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            letter-spacing: 0.5px;
+            opacity: 0.9;
         }
 
         /* กล่องเนื้อหาหลัก */
         .container {
             max-width: 900px;
-            margin: -60px auto 40px;
+            margin: -80px auto 50px;
             background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            padding: 45px 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             position: relative;
-            border-top: 6px solid var(--secondary-color);
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            z-index: 10;
         }
 
         /* ส่วนข้อมูลส่วนตัวและรูปภาพ */
@@ -72,49 +72,82 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .profile-image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
         }
 
         .profile-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
             object-fit: cover;
-            border: 6px solid var(--secondary-color);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            background: url('http://googleusercontent.com/image_collection/image_retrieval/11780645488732589921_0') center/cover;
-            background-color: #fff;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.3);
+            background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80') center/cover;
+            background-color: #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.03);
+        }
+
+        .profile-details {
+            flex: 1;
         }
 
         .profile-details h2 {
             margin-top: 0;
-            color: var(--primary-color);
+            color: var(--primary-dark);
             font-size: 1.8rem;
-            border-bottom: 2px dashed var(--secondary-color);
-            padding-bottom: 10px;
-            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-details h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
         }
 
         .profile-details p {
             font-size: 1.1rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #444;
         }
 
         .highlight-text {
             color: var(--primary-color);
             font-weight: 600;
+            display: inline-block;
+            width: 130px;
         }
 
         /* หัวข้อเนื้อหา */
         .section-title {
-            color: var(--primary-color);
-            border-left: 6px solid var(--secondary-color);
-            padding-left: 15px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            background: linear-gradient(to right, rgba(166, 124, 0, 0.15), transparent);
-            padding-block: 5px;
+            color: var(--primary-dark);
+            font-size: 1.6rem;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '✦';
+            color: var(--secondary-color);
+            font-size: 1.2rem;
         }
 
         /* รายการข้อมูล */
@@ -124,92 +157,122 @@
         }
 
         .info-list li {
-            background-color: rgba(227, 219, 209, 0.4);
-            margin-bottom: 15px;
-            padding: 20px;
-            border-radius: 4px;
-            border-left: 4px solid var(--primary-color);
-            border-bottom: 1px solid rgba(89, 60, 42, 0.2);
-            transition: transform 0.2s ease;
+            background-color: var(--white);
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-top: 1px solid #f4f4f4;
+            border-right: 1px solid #f4f4f4;
+            border-bottom: 1px solid #f4f4f4;
+            transition: all 0.3s ease;
         }
 
         .info-list li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            background-color: rgba(227, 219, 209, 0.7);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+            border-left-color: var(--secondary-color);
         }
 
         .degree-title {
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--primary-dark);
             font-size: 1.15rem;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         .university {
-            color: #4A4036;
-            font-weight: 600;
-            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
         }
 
         .research-details {
             font-size: 0.95rem;
-            color: #333;
-            line-height: 1.5;
+            color: #555;
+            line-height: 1.6;
+            background-color: #f8faff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
 
         .thesis-topic {
-            margin-top: 8px;
+            margin-top: 12px;
             font-size: 0.95rem;
-            color: #333;
-            font-style: italic;
-            background-color: rgba(166, 124, 0, 0.15);
-            border-left: 3px solid var(--secondary-color);
-            padding: 8px 12px;
-            border-radius: 2px;
+            color: #555;
+            background-color: #fff0f5;
+            padding: 10px 15px;
+            border-radius: 6px;
             display: inline-block;
+            border-left: 3px solid var(--secondary-color);
         }
 
         .badge-year {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: var(--white);
-            padding: 2px 8px;
-            border-radius: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: bold;
-            margin-right: 8px;
+            font-weight: 600;
+            margin-right: 10px;
             vertical-align: middle;
+            box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
         }
 
         /* ลวดลายแบ่งส่วนเนื้อหา */
-        .thai-divider {
-            text-align: center;
-            color: var(--secondary-color);
-            font-size: 1.8rem;
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(74, 144, 226, 0.2), transparent);
             margin: 40px 0;
-            letter-spacing: 15px;
-            opacity: 0.8;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '🌸';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--white);
+            padding: 0 10px;
+            font-size: 1.2rem;
         }
 
         /* ส่วนท้าย (Footer) */
         footer {
             text-align: center;
-            padding: 25px;
-            background-color: var(--primary-color);
-            color: #EAEAEA;
+            padding: 30px;
+            background-color: #ffffff;
+            color: var(--text-muted);
             margin-top: 50px;
-            border-top: 5px solid var(--secondary-color);
-            background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            border-top: 1px solid #eaeaea;
         }
 
         /* Responsive Design สำหรับมือถือ */
         @media (max-width: 768px) {
+            .hero-section {
+                clip-path: none;
+                padding-bottom: 5rem;
+            }
+            .container {
+                margin-top: -30px;
+                padding: 30px 20px;
+            }
             .profile-wrapper {
                 flex-direction: column;
                 text-align: center;
             }
-            .profile-image {
-                margin: 0 auto;
+            .highlight-text {
+                display: block;
+                width: auto;
+                margin-bottom: 5px;
+            }
+            .profile-details h2::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
@@ -225,24 +288,26 @@
     <main class="container">
         
         <div class="profile-wrapper">
-            <div class="profile-image" title="ภาพประกอบ อ.ดร.วิโรจน์"></div>
+            <div class="profile-image-container">
+                <div class="profile-image" title="ภาพประกอบ อ.ดร.วิโรจน์"></div>
+            </div>
             <div class="profile-details">
                 <h2>ข้อมูลบุคลากร</h2>
-                <p><span class="highlight-text">ชื่อ-นามสกุล:</span> อ.ดร.วิโรจน์ ยอดสวัสดิ์ (Dr. Wirot Yodsawat)</p>
+                <p><span class="highlight-text">ชื่อ-นามสกุล:</span> อ.ดร.วิโรจน์ ยอดสวัสดิ์ (Dr. Wirot Yotsawat)</p>
                 <p><span class="highlight-text">ตำแหน่งปัจจุบัน:</span> อาจารย์ประจำสาขาวิชา</p>
                 <p><span class="highlight-text">สังกัด:</span> สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี</p>
                 <p><span class="highlight-text">สถานที่ทำงาน:</span> มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา</p>
             </div>
         </div>
 
-        <div class="thai-divider">❖ ❖ ❖</div>
+        <div class="divider"></div>
 
         <h3 class="section-title">ประวัติการศึกษา</h3>
         <ul class="info-list">
             <li>
                 <div class="degree-title">ปรัชญาดุษฎีบัณฑิต (ปร.ด.) สาขาวิทยาการคอมพิวเตอร์</div>
                 <div class="university">มหาวิทยาลัยเกษตรศาสตร์</div>
-                <div class="thesis-topic">หัวข้อวิทยานิพนธ์: Credit Scoring Classification Model using Cost-sensitive Neural Network Ensemble</div>
+                <div class="thesis-topic"><strong>หัวข้อวิทยานิพนธ์:</strong> Credit Scoring Classification Model using Cost-sensitive Neural Network Ensemble</div>
             </li>
             <li>
                 <div class="degree-title">วิทยาศาสตรมหาบัณฑิต (วท.ม.) สาขาวิทยาการคอมพิวเตอร์</div>
@@ -257,20 +322,52 @@
         <h3 class="section-title">ผลงานทางวิชาการและงานวิจัยที่ตีพิมพ์ (Publications)</h3>
         <ul class="info-list">
             <li>
+                <div class="degree-title"><span class="badge-year">2023</span> Bankruptcy prediction model using cost-sensitive extreme gradient boosting in the context of imbalanced datasets</div>
+                <div class="university">International Journal of Electrical and Computer Engineering (IJECE)</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Kanyalag Phodong, Thawatchai Promrat, Pakaket Wattuya<br><br>
+                    <strong>รายละเอียด:</strong> งานวิจัยนำเสนอตัวแบบพยากรณ์การล้มละลายที่มีประสิทธิภาพสูง โดยประยุกต์ใช้การเรียนรู้ที่คำนึงถึงต้นทุนความผิดพลาด (Cost-sensitive learning) ร่วมกับอัลกอริทึม Extreme Gradient Boosting (XGBoost) เพื่อจัดการกับปัญหาชุดข้อมูลที่ไม่สมดุล (Imbalanced datasets)
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2021</span> A Novel Method for Credit Scoring Based on Cost-Sensitive Neural Network Ensemble</div>
+                <div class="university">IEEE Access</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Pakaket Wattuya, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> การนำเสนอวิธีการใหม่ (CS-NNE) ในการให้คะแนนเครดิต (Credit Scoring) โดยอาศัยการทำงานร่วมกันระหว่าง Cost-sensitive learning และ Neural network ensemble เพื่อลดข้อผิดพลาดจากกลุ่มข้อมูลที่เสียสมดุล
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2021</span> Improved credit scoring model using XGBoost with Bayesian hyper-parameter optimization</div>
+                <div class="university">International Journal of Electrical and Computer Engineering (IJECE)</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Pakaket Wattuya, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> งานวิจัยเพื่อปรับปรุงตัวแบบในการพิจารณาให้คะแนนเครดิต โดยการนำอัลกอริทึม XGBoost มาใช้ร่วมกับการค้นหาพารามิเตอร์ที่เหมาะสมที่สุดด้วยเทคนิค Bayesian Optimization
+                </div>
+            </li>
+            <li>
                 <div class="degree-title"><span class="badge-year">2564</span> หุ่นยนต์จ่ายยาอัตโนมัติด้วยเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง</div>
                 <div class="university">วารสารวิชาการพระจอมเกล้าพระนครเหนือ (KMUTNB International Journal of Applied Science and Technology) ปีที่ 31 ฉบับที่ 1</div>
-                <p class="research-details">
-                    <strong>ผู้แต่งร่วม:</strong> กันยาลักษณ์ โพธิ์ดง, ต่อลาภ ไทยเขียว, วิโรจน์ ยอดสวัสดิ์, วชิรา ปูชตรีรัตน์ และ ยุพิน พวกยะ<br>
-                    <strong>บทคัดย่อ/รายละเอียด:</strong> การบูรณาการเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT) ร่วมกับไมโครคอนโทรลเลอร์ เพื่อพัฒนาหุ่นยนต์จ่ายยาอัตโนมัติสำหรับช่วยแก้ปัญหาการลืมรับประทานยาและเพิ่มความปลอดภัยในการให้ยาแก่ผู้ป่วยและผู้สูงอายุ
-                </p>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> กันยาลักษณ์ โพธิ์ดง, ต่อลาภ ไทยเขียว, วิโรจน์ ยอดสวัสดิ์, วชิรา ปูชตรีรัตน์ และ ยุพิน พวกยะ<br><br>
+                    <strong>รายละเอียด:</strong> การบูรณาการเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT) ร่วมกับไมโครคอนโทรลเลอร์ เพื่อพัฒนาหุ่นยนต์จ่ายยาอัตโนมัติสำหรับช่วยแก้ปัญหาการลืมรับประทานยาและเพิ่มความปลอดภัยในการให้ยาแก่ผู้ป่วยและผู้สูงอายุ
+                </div>
             </li>
             <li>
                 <div class="degree-title"><span class="badge-year">2560</span> การสร้างตัวแบบนักท่องเที่ยวภายในประเทศโดยใช้เทคนิคการจัดกลุ่มและกฎความสัมพันธ์ กรณีศึกษา: จังหวัดพระนครศรีอยุธยา</div>
                 <div class="university">วารสารวิชาการพระจอมเกล้าพระนครเหนือ ปีที่ 27 ฉบับที่ 4 หน้า 829-841</div>
-                <p class="research-details">
-                    <strong>ผู้แต่งร่วม:</strong> วิโรจน์ ยอดสวัสดิ์, สาโรช ปุริสังคหะ, วิมล กิตติรักษ์ปัญญา, อนงค์นาฏ ศรีวิหค<br>
-                    <strong>บทคัดย่อ/รายละเอียด:</strong> งานวิจัยที่ประยุกต์ใช้วิทยาการข้อมูล (Data Mining) ทั้งเทคนิคการจัดกลุ่ม (Clustering) และการหากฎความสัมพันธ์ (Association Rule) เพื่อวิเคราะห์พฤติกรรมและสร้างตัวแบบเพื่อส่งเสริมการท่องเที่ยวภายในจังหวัดพระนครศรีอยุธยา
-                </p>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> วิโรจน์ ยอดสวัสดิ์, สาโรช ปุริสังคหะ, วิมล กิตติรักษ์ปัญญา, อนงค์นาฏ ศรีวิหค<br><br>
+                    <strong>รายละเอียด:</strong> งานวิจัยที่ประยุกต์ใช้วิทยาการข้อมูล (Data Mining) ทั้งเทคนิคการจัดกลุ่ม (Clustering) และการหากฎความสัมพันธ์ (Association Rule) เพื่อวิเคราะห์พฤติกรรมและสร้างตัวแบบเพื่อส่งเสริมการท่องเที่ยวภายในจังหวัดพระนครศรีอยุธยา
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2014</span> Market Segmentation of Inbound Business Tourists to Thailand by Binding of Unsupervised and Supervised Learning Techniques</div>
+                <div class="university">Journal of Software</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> การประยุกต์ใช้เทคนิคการทำเหมืองข้อมูล (Data Mining) เพื่อการแบ่งส่วนตลาดนักท่องเที่ยว โดยใช้การจัดกลุ่ม (Clustering) แบบ Two-step ร่วมกับการจำแนกประเภท (Classification) สำหรับนักท่องเที่ยวเชิงธุรกิจในประเทศไทย
+                </div>
             </li>
         </ul>
 
@@ -278,7 +375,7 @@
 
     <footer>
         <p>&copy; 2026 ข้อมูลประวัติบุคลากร - มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา</p>
-        <p style="font-size: 0.85rem; color: #A67C00;">ออกแบบในรูปแบบ Ancient Ruins Theme (ธีมโบราณสถาน)</p>
+        <p style="font-size: 0.85rem; color: #b3b3b3; margin-top: 5px;">ออกแบบในรูปแบบ Modern & Elegant Theme</p>
     </footer>
 
 </body>
