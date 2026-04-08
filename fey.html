@@ -30,13 +30,12 @@
 
         /* ส่วนหัวของเว็บไซต์ (Header) */
         .hero-section {
-            /* ภาพพื้นหลังที่ดูสวยงาม โปร่งโล่ง ทันสมัย พร้อม Gradient สีสวยๆ */
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.85) 0%, rgba(142, 68, 173, 0.8) 100%), 
                         url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: var(--white);
             text-align: center;
             padding: 6rem 1rem 7rem 1rem;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* ตัดขอบล่างให้เฉียงดูมีมิติ */
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         .hero-section h1 {
@@ -61,8 +60,8 @@
             margin: -80px auto 50px;
             background: var(--white);
             padding: 45px 50px;
-            border-radius: 20px; /* มุมโค้งมนละมุน */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* เงาฟุ้งๆ นุ่มนวล */
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             position: relative;
             z-index: 10;
         }
@@ -95,7 +94,7 @@
         }
 
         .profile-image:hover {
-            transform: scale(1.03); /* เอฟเฟกต์ขยายรูปนิดๆ เมื่อเอาเมาส์ชี้ */
+            transform: scale(1.03);
         }
 
         .profile-details {
@@ -110,7 +109,6 @@
             margin-bottom: 20px;
         }
 
-        /* เส้นขีดตกแต่งใต้หัวข้อ */
         .profile-details h2::after {
             content: '';
             position: absolute;
@@ -147,7 +145,7 @@
         }
 
         .section-title::before {
-            content: '✦'; /* ไอคอนตกแต่งเล็กๆ */
+            content: '✦';
             color: var(--secondary-color);
             font-size: 1.2rem;
         }
@@ -172,7 +170,7 @@
         }
 
         .info-list li:hover {
-            transform: translateY(-5px); /* เด้งขึ้นเบาๆ */
+            transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
             border-left-color: var(--secondary-color);
         }
@@ -205,7 +203,7 @@
             margin-top: 12px;
             font-size: 0.95rem;
             color: #555;
-            background-color: #fff0f5; /* สีพื้นหลังวิทยานิพนธ์ชมพูอ่อนๆ */
+            background-color: #fff0f5;
             padding: 10px 15px;
             border-radius: 6px;
             display: inline-block;
@@ -233,7 +231,7 @@
         }
 
         .divider::after {
-            content: '🌸'; /* สัญลักษณ์ดอกไม้เพิ่มความสวยงาม */
+            content: '🌸';
             position: absolute;
             left: 50%;
             top: 50%;
@@ -295,7 +293,7 @@
             </div>
             <div class="profile-details">
                 <h2>ข้อมูลบุคลากร</h2>
-                <p><span class="highlight-text">ชื่อ-นามสกุล:</span> อ.ดร.วิโรจน์ ยอดสวัสดิ์ (Dr. Wirot Yodsawat)</p>
+                <p><span class="highlight-text">ชื่อ-นามสกุล:</span> อ.ดร.วิโรจน์ ยอดสวัสดิ์ (Dr. Wirot Yotsawat)</p>
                 <p><span class="highlight-text">ตำแหน่งปัจจุบัน:</span> อาจารย์ประจำสาขาวิชา</p>
                 <p><span class="highlight-text">สังกัด:</span> สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี</p>
                 <p><span class="highlight-text">สถานที่ทำงาน:</span> มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา</p>
@@ -308,7 +306,7 @@
         <ul class="info-list">
             <li>
                 <div class="degree-title">ปรัชญาดุษฎีบัณฑิต (ปร.ด.) สาขาวิทยาการคอมพิวเตอร์</div>
-                <div class="university"><i class="fas fa-graduation-cap"></i> มหาวิทยาลัยเกษตรศาสตร์</div>
+                <div class="university">มหาวิทยาลัยเกษตรศาสตร์</div>
                 <div class="thesis-topic"><strong>หัวข้อวิทยานิพนธ์:</strong> Credit Scoring Classification Model using Cost-sensitive Neural Network Ensemble</div>
             </li>
             <li>
@@ -324,11 +322,35 @@
         <h3 class="section-title">ผลงานทางวิชาการและงานวิจัยที่ตีพิมพ์ (Publications)</h3>
         <ul class="info-list">
             <li>
+                <div class="degree-title"><span class="badge-year">2023</span> Bankruptcy prediction model using cost-sensitive extreme gradient boosting in the context of imbalanced datasets</div>
+                <div class="university">International Journal of Electrical and Computer Engineering (IJECE)</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Kanyalag Phodong, Thawatchai Promrat, Pakaket Wattuya<br><br>
+                    <strong>รายละเอียด:</strong> งานวิจัยนำเสนอตัวแบบพยากรณ์การล้มละลายที่มีประสิทธิภาพสูง โดยประยุกต์ใช้การเรียนรู้ที่คำนึงถึงต้นทุนความผิดพลาด (Cost-sensitive learning) ร่วมกับอัลกอริทึม Extreme Gradient Boosting (XGBoost) เพื่อจัดการกับปัญหาชุดข้อมูลที่ไม่สมดุล (Imbalanced datasets)
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2021</span> A Novel Method for Credit Scoring Based on Cost-Sensitive Neural Network Ensemble</div>
+                <div class="university">IEEE Access</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Pakaket Wattuya, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> การนำเสนอวิธีการใหม่ (CS-NNE) ในการให้คะแนนเครดิต (Credit Scoring) โดยอาศัยการทำงานร่วมกันระหว่าง Cost-sensitive learning และ Neural network ensemble เพื่อลดข้อผิดพลาดจากกลุ่มข้อมูลที่เสียสมดุล
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2021</span> Improved credit scoring model using XGBoost with Bayesian hyper-parameter optimization</div>
+                <div class="university">International Journal of Electrical and Computer Engineering (IJECE)</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Pakaket Wattuya, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> งานวิจัยเพื่อปรับปรุงตัวแบบในการพิจารณาให้คะแนนเครดิต โดยการนำอัลกอริทึม XGBoost มาใช้ร่วมกับการค้นหาพารามิเตอร์ที่เหมาะสมที่สุดด้วยเทคนิค Bayesian Optimization
+                </div>
+            </li>
+            <li>
                 <div class="degree-title"><span class="badge-year">2564</span> หุ่นยนต์จ่ายยาอัตโนมัติด้วยเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง</div>
                 <div class="university">วารสารวิชาการพระจอมเกล้าพระนครเหนือ (KMUTNB International Journal of Applied Science and Technology) ปีที่ 31 ฉบับที่ 1</div>
                 <div class="research-details">
                     <strong>ผู้แต่งร่วม:</strong> กันยาลักษณ์ โพธิ์ดง, ต่อลาภ ไทยเขียว, วิโรจน์ ยอดสวัสดิ์, วชิรา ปูชตรีรัตน์ และ ยุพิน พวกยะ<br><br>
-                    <strong>บทคัดย่อ/รายละเอียด:</strong> การบูรณาการเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT) ร่วมกับไมโครคอนโทรลเลอร์ เพื่อพัฒนาหุ่นยนต์จ่ายยาอัตโนมัติสำหรับช่วยแก้ปัญหาการลืมรับประทานยาและเพิ่มความปลอดภัยในการให้ยาแก่ผู้ป่วยและผู้สูงอายุ
+                    <strong>รายละเอียด:</strong> การบูรณาการเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT) ร่วมกับไมโครคอนโทรลเลอร์ เพื่อพัฒนาหุ่นยนต์จ่ายยาอัตโนมัติสำหรับช่วยแก้ปัญหาการลืมรับประทานยาและเพิ่มความปลอดภัยในการให้ยาแก่ผู้ป่วยและผู้สูงอายุ
                 </div>
             </li>
             <li>
@@ -336,7 +358,15 @@
                 <div class="university">วารสารวิชาการพระจอมเกล้าพระนครเหนือ ปีที่ 27 ฉบับที่ 4 หน้า 829-841</div>
                 <div class="research-details">
                     <strong>ผู้แต่งร่วม:</strong> วิโรจน์ ยอดสวัสดิ์, สาโรช ปุริสังคหะ, วิมล กิตติรักษ์ปัญญา, อนงค์นาฏ ศรีวิหค<br><br>
-                    <strong>บทคัดย่อ/รายละเอียด:</strong> งานวิจัยที่ประยุกต์ใช้วิทยาการข้อมูล (Data Mining) ทั้งเทคนิคการจัดกลุ่ม (Clustering) และการหากฎความสัมพันธ์ (Association Rule) เพื่อวิเคราะห์พฤติกรรมและสร้างตัวแบบเพื่อส่งเสริมการท่องเที่ยวภายในจังหวัดพระนครศรีอยุธยา
+                    <strong>รายละเอียด:</strong> งานวิจัยที่ประยุกต์ใช้วิทยาการข้อมูล (Data Mining) ทั้งเทคนิคการจัดกลุ่ม (Clustering) และการหากฎความสัมพันธ์ (Association Rule) เพื่อวิเคราะห์พฤติกรรมและสร้างตัวแบบเพื่อส่งเสริมการท่องเที่ยวภายในจังหวัดพระนครศรีอยุธยา
+                </div>
+            </li>
+            <li>
+                <div class="degree-title"><span class="badge-year">2014</span> Market Segmentation of Inbound Business Tourists to Thailand by Binding of Unsupervised and Supervised Learning Techniques</div>
+                <div class="university">Journal of Software</div>
+                <div class="research-details">
+                    <strong>ผู้แต่งร่วม:</strong> Wirot Yotsawat, Anongnart Srivihok<br><br>
+                    <strong>รายละเอียด:</strong> การประยุกต์ใช้เทคนิคการทำเหมืองข้อมูล (Data Mining) เพื่อการแบ่งส่วนตลาดนักท่องเที่ยว โดยใช้การจัดกลุ่ม (Clustering) แบบ Two-step ร่วมกับการจำแนกประเภท (Classification) สำหรับนักท่องเที่ยวเชิงธุรกิจในประเทศไทย
                 </div>
             </li>
         </ul>
