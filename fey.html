@@ -1,11 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fey</title>
+    <title>ประวัติส่วนตัว - ดร.วิโรจน์ ยอดสวัสดิ์</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+        :root {
+            --primary-color: #993300; /* สีอิฐมอญอยุธยา */
+            --secondary-color: #DAA520; /* สีทอง */
+            --bg-light: #FDF5E6; /* สีครีมนวล */
+            --text-dark: #333333;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* ส่วนหัวของเว็บไซต์ (Header) */
+        .hero-section {
+            background: linear-gradient(rgba(153, 51, 0, 0.85), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1rem 6rem 1rem;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-top: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* กล่องเนื้อหาหลัก */
+        .container {
+            max-width: 900px;
+            margin: -60px auto 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            position: relative;
+            border-top: 6px solid var(--secondary-color);
+        }
+
+        /* ส่วนข้อมูลส่วนตัวและรูปภาพ */
+        .profile-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--secondary-color);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            background: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&q=80') center/cover;
+        }
+
+        .profile-details h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .profile-details p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* หัวข้อเนื้อหา */
+        .section-title {
+            color: var(--primary-color);
+            border-left: 6px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            background: linear-gradient(to right, rgba(218, 165, 32, 0.1), transparent);
+            padding-block: 5px;
+        }
+
+        /* รายการข้อมูล */
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            background-color: var(--bg-light);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.2s ease;
+        }
+
+        .info-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .degree-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        .university {
+            color: #555;
+            font-weight: 600;
+        }
+
+        .thesis-topic {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            background-color: rgba(218, 165, 32, 0.15);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* ลวดลายแบ่งส่วนเนื้อหา */
+        .thai-divider {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin: 40px 0;
+            letter-spacing: 15px;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--primary-color);
+            color: var(--bg-light);
+            margin-top: 50px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        /* Responsive Design สำหรับมือถือ */
+        @media (max-width: 768px) {
+            .profile-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-image {
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header class="hero-section">
+        <h1>อาจารย์ ดร.วิโรจน์ ยอดสวัสดิ์</h1>
+        <p>สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี</p>
+        <p>มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="profile-wrapper">
+            <div class="profile-image" title="ภาพประกอบ (Placeholder)"></div>
+            <div class="profile-details">
+                <h2>ข้อมูลบุคลากร</h2>
+                <p><span class="highlight-text">ชื่อ-นามสกุล:</span> อ.ดร.วิโรจน์ ยอดสวัสดิ์ (Dr. Wirot Yodsawat)</p>
+                <p><span class="highlight-text">ตำแหน่งปัจจุบัน:</span> อาจารย์ประจำสาขาวิชา</p>
+                <p><span class="highlight-text">สังกัด:</span> สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี</p>
+                <p><span class="highlight-text">สถานที่ทำงาน:</span> มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา</p>
+            </div>
+        </div>
+
+        <div class="thai-divider">❖ ❖ ❖</div>
+
+        <h3 class="section-title">ประวัติการศึกษา</h3>
+        <ul class="info-list">
+            <li>
+                <div class="degree-title">ปรัชญาดุษฎีบัณฑิต (ปร.ด.) สาขาวิทยาการคอมพิวเตอร์</div>
+                <div class="university">มหาวิทยาลัยเกษตรศาสตร์</div>
+                <div class="thesis-topic">หัวข้อวิทยานิพนธ์: Credit Scoring Classification Model using Cost-sensitive Neural Network Ensemble</div>
+            </li>
+            <li>
+                <div class="degree-title">วิทยาศาสตรมหาบัณฑิต (วท.ม.) สาขาวิทยาการคอมพิวเตอร์</div>
+                <div class="university">มหาวิทยาลัยเกษตรศาสตร์</div>
+            </li>
+            <li>
+                <div class="degree-title">วิทยาศาสตรบัณฑิต (วท.บ.) สาขาวิทยาการคอมพิวเตอร์</div>
+                <div class="university">มหาวิทยาลัยวลัยลักษณ์</div>
+            </li>
+        </ul>
+
+        <h3 class="section-title">ผลงานวิชาการและงานวิจัยที่โดดเด่น</h3>
+        <ul class="info-list">
+            <li>
+                <div class="degree-title">การพัฒนางานวิจัยนวัตกรรม IoT</div>
+                <div class="university">โครงการ: หุ่นยนต์จ่ายยาอัตโนมัติด้วยเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT)</div>
+                <p style="margin-top: 10px; font-size: 0.95rem; color: #555;">
+                    ผลงานการพัฒนานวัตกรรมร่วมกับคณาจารย์ในสาขาวิชาฯ เพื่อประยุกต์ใช้เทคโนโลยีวิทยาการคอมพิวเตอร์และ IoT ในการสร้างหุ่นยนต์เพื่อเพิ่มประสิทธิภาพและความแม่นยำในระบบการจ่ายยา
+                </p>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ข้อมูลประวัติบุคลากร - มหาวิทยาลัยราชภัฏพระนครศรีอยุธยา</p>
+        <p style="font-size: 0.8rem; opacity: 0.8;">ออกแบบในรูปแบบ Ayutthaya Theme</p>
+    </footer>
+
 </body>
 </html>
