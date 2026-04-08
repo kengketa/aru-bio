@@ -1,11 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amnat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติส่วนตัว</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .left, .right {
+      background: #f8fafc;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #1d4ed8;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: #2563eb;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .info p {
+      margin-bottom: 10px;
+    }
+
+    .skill {
+      margin-bottom: 12px;
+    }
+
+    .skill span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .bar {
+      height: 10px;
+      background: #dbeafe;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar div {
+      height: 100%;
+      background: #2563eb;
+      border-radius: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #eff6ff;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+
+  <div class="container">
+    <div class="header">
+      <img src="https://via.placeholder.com/150" alt="Profile Image">
+      <h1>ชื่อ - นามสกุล</h1>
+      <p>ตำแหน่งงาน / อาชีพ / หน่วยงาน</p>
+    </div>
+
+    <div class="content">
+      <div class="left">
+        <h2>ข้อมูลส่วนตัว</h2>
+        <div class="info">
+          <p><strong>ชื่อ:</strong> นายตัวอย่าง ใจดี</p>
+          <p><strong>วันเกิด:</strong> 1 มกราคม 2535</p>
+          <p><strong>อีเมล:</strong> example@email.com</p>
+          <p><strong>โทรศัพท์:</strong> 08x-xxx-xxxx</p>
+          <p><strong>ที่อยู่:</strong> จังหวัดพระนครศรีอยุธยา</p>
+        </div>
+
+        <h2>ทักษะ</h2>
+        <div class="skill">
+          <span>HTML5</span>
+          <div class="bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS3</span>
+          <div class="bar"><div style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <span>Laravel / PHP</span>
+          <div class="bar"><div style="width: 80%;"></div></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>ประวัติโดยย่อ</h2>
+        <p>
+          เป็นผู้ที่มีความสนใจด้านการพัฒนาเว็บไซต์และระบบสารสนเทศ
+          มีประสบการณ์ในการพัฒนาระบบด้วย HTML, CSS, JavaScript, PHP และ Laravel
+          รวมถึงการออกแบบฐานข้อมูลและส่วนติดต่อผู้ใช้งานให้เหมาะสมกับองค์กร
+        </p>
+
+        <h2>ประวัติการศึกษา</h2>
+        <ul>
+          <li>ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์ - มหาวิทยาลัยตัวอย่าง</li>
+          <li>ประกาศนียบัตร / อบรมด้าน Web Development และ Database</li>
+        </ul>
+
+        <h2>ประสบการณ์ทำงาน</h2>
+        <ul>
+          <li>พัฒนาเว็บไซต์และระบบงานภายในองค์กร</li>
+          <li>ดูแลฐานข้อมูลและระบบสารสนเทศ</li>
+          <li>ออกแบบและพัฒนาระบบบริการออนไลน์</li>
+        </ul>
+
+        <h2>ผลงานเด่น</h2>
+        <ul>
+          <li>ระบบรับสมัครออนไลน์</li>
+          <li>ระบบจัดการข้อมูลภายในหน่วยงาน</li>
+          <li>เว็บไซต์ประชาสัมพันธ์และบริการข้อมูล</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 Profile Page | ออกแบบด้วย HTML5 และ CSS3
+    </div>
+  </div>
+
 </body>
 </html>
